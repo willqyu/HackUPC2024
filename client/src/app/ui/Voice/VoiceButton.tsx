@@ -19,7 +19,7 @@ const machine = setup({
         SpeechRecognition.startListening();
       },
       stop_listening: () => {
-        SpeechRecognition.stopListening();
+        // SpeechRecognition.stopListening();
       },
       start_thinking: () => {},
   },

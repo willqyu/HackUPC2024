@@ -9,7 +9,7 @@ export default function Guidance() {
         <div>
             <p>Hello World</p>
             <VoiceEngine />
-            <button onClick={() => say("I'm very sorry, but I could not find that part.")}>
+            <button onClick={() => say("I'm very sorry, but I could not find that part.", ()=>{})}>
                 Say Something
             </button>
         </div>
