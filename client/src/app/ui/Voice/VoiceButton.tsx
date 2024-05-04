@@ -4,9 +4,13 @@ import 'regenerator-runtime/runtime'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrophone } from '@fortawesome/free-solid-svg-icons';
+import { useMachine } from '@xstate/react';
+import { orderMachine } from "@/app/lib/voice_states/order"
+
 
 export default function VoiceButton () {
-
+  
+  const [state, send] = useMachine(orderMachine);
   const {
     transcript,
     listening,
@@ -15,7 +19,7 @@ export default function VoiceButton () {
   } = useSpeechRecognition();
   return (
     // Button for starting and stopping voice recording
-    <div>
+    <div className='h-20 w-20'>
       <button
         onMouseDown={SpeechRecognition.startListening}    // Start recording when mouse is pressed
         onMouseUp={SpeechRecognition.stopListening}        // Stop recording when mouse is released

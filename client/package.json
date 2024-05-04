@@ -12,6 +12,8 @@
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@xstate/react": "^4.1.1",
+    "axios": "^1.6.8",
     "dotenv": "^16.4.5",
     "fuzzysearch-ts": "^1.0.3",
     "next": "14.2.3",
@@ -19,7 +21,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-speech-recognition": "^3.10.0",
-    "regenerator-runtime": "^0.14.1"
+    "regenerator-runtime": "^0.14.1",
+    "xstate": "^5.12.0"
   },
   "devDependencies": {
     "@types/node": "^20",
