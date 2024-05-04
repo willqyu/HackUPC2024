@@ -1,5 +1,5 @@
 
-export async function say(str: string) {
+export async function say(str: string, complete: CallableFunction) {
   const options = {
     method: 'POST',
     headers: {
@@ -25,11 +25,12 @@ export async function say(str: string) {
   const raw = await fetch('https://api.edenai.run/v2/audio/text_to_speech', options)
     .then(response => response.json())
     .then(response => {
-      console.log(response.openai.audio);
+      // console.log(response.openai.audio);
       
       const audio = new Audio("data:audio/mp3;base64," + response.openai.audio);
       audio.load()
       audio.play()
+      audio.onended = () => complete();
     }
     )
     .catch(err => console.error(err));

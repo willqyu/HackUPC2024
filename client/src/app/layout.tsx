@@ -6,6 +6,7 @@ import "./globals.css";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Navbar from './ui/Navbar/navbar';
+import { fetchCSV } from './lib/utils';
 config.autoAddCss = false
 
 const inter = Inter({ subsets: ["latin"] });
@@ -14,6 +15,8 @@ export const metadata: Metadata = {
   title: "Seidor",
   description: "AI Logistics Assistant",
 };
+
+const allItems = fetchCSV(); 
 
 export default function RootLayout({
   children,
