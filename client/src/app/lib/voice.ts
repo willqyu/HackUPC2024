@@ -1,20 +1,3 @@
-import axios from 'axios';
-
-
-// let utterance = new SpeechSynthesisUtterance();
-// utterance.pitch = 4;
-
-// export function say(str: string) {
-//   utterance.text = str;
-//   let voices = speechSynthesis.getVoices();
-//   utterance.voice = voices[2];
-//   speechSynthesis.speak(utterance);
-  
-// }
-
-
-
-
 
 export async function say(str: string) {
   const options = {

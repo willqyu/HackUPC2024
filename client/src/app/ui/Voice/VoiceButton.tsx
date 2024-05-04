@@ -19,7 +19,7 @@ export default function VoiceButton () {
   } = useSpeechRecognition();
   return (
     // Button for starting and stopping voice recording
-    <div className='h-20 w-20'>
+    <div>
       <button
         onMouseDown={SpeechRecognition.startListening}    // Start recording when mouse is pressed
         onMouseUp={SpeechRecognition.stopListening}        // Stop recording when mouse is released
