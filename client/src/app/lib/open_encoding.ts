@@ -53,10 +53,12 @@ export async function extractWant(str: string) {
   let answer_str = completion.choices[0].message.content;
   let sep = answer_str?.split(",");
   if (sep?.length == 2) {
-    return {
+    const req = {
       name: sep[0],
       count: Number(sep[1])
     } as UserRequest
+    
+    return req;
   }
   else {
     return null
