@@ -21,9 +21,9 @@ export default function VoiceButton () {
     // Button for starting and stopping voice recording
     <div>
       <button
-        onMouseDown={SpeechRecognition.startListening}    // Start recording when mouse is pressed
+        onMouseDown={(event) => SpeechRecognition.startListening()}    // Start recording when mouse is pressed
         onMouseUp={SpeechRecognition.stopListening}        // Stop recording when mouse is released
-        onTouchStart={SpeechRecognition.startListening}    // Start recording when touch begins on a touch device
+        onTouchStart={(event) => SpeechRecognition.startListening()}    // Start recording when touch begins on a touch device
         onTouchEnd={SpeechRecognition.stopListening}        // Stop recording when touch ends on a touch device
         className="h-20 w-20 rounded-full border-2 border-black bg-transparent transform hover:scale-110 transition duration-300"
       >
@@ -31,7 +31,7 @@ export default function VoiceButton () {
         <FontAwesomeIcon icon={faMicrophone} className='text-3xl' />
       </button>
       
-      <p>{transcript}</p>
+      <p className='text-center'>{transcript}</p>
     </div>
   );
 };
