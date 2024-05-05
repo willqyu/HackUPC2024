@@ -1,4 +1,5 @@
 import { Item } from "@/app/lib/definitions";
+import { json } from "stream/consumers";
 
 function padID(id: number) {
     let a = ("000000" + id.toString()).slice(-6);
@@ -21,6 +22,11 @@ export default function ListItem({
             </div>
             <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
                 <p className="text-sm leading-6 text-gray-900">{count}</p>
+                <button onClick={
+                    (e) => fetch("/api", {method: 'POST', headers: { 'Content-Type': 'application/json', }, body: JSON.stringify(item),})
+                }>
+                    +
+                </button>
             </div>
         </li>
     )

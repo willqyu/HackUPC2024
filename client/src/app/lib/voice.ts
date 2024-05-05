@@ -1,3 +1,6 @@
+import fs from "fs";
+import path from "path";
+import OpenAI from "openai";
 
 export async function say(str: string, complete: CallableFunction) {
   const options = {

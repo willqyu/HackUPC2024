@@ -1,4 +1,4 @@
-import VoiceEngine from "@/app/ui/Voice/VoiceButton";
+import VoiceEngine from "@/app/ui/Voice/VoiceEngine";
 
 export default function Order () {
     return (

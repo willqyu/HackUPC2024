@@ -33,7 +33,7 @@ export default function SearchBar(
                 }}
             />
             </div>
-            <List items={searchItems} />
+            <List items={searchItems} counts={searchItems.map((item, index)=>1)} />
         </div>
         
     )

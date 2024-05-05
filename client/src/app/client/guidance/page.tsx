@@ -1,17 +1,14 @@
 "use client"
 import { say } from "@/app/lib/voice";
 import List from "@/app/ui/List/list";
-import VoiceEngine from "@/app/ui/Voice/VoiceButton";
+// import VoiceEngineBeta from "@/app/ui/Voice/VoiceEngineBeta";
+import VoiceEngine from "@/app/ui/Voice/VoiceEngine";
 
 
 export default function Guidance() {
     return (
         <div>
-            <p>Hello World</p>
             <VoiceEngine />
-            <button onClick={() => say("I'm very sorry, but I could not find that part.", ()=>{})}>
-                Say Something
-            </button>
         </div>
     )
 }

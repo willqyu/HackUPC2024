@@ -4,7 +4,7 @@ import { Item } from '@/app/lib/definitions';
 import ListItem from "./list_item";
 
 export default function List (
-    {items}:{items: Item[]}
+    {items, counts}:{items: Item[], counts: number[]}
 ) {
     return (
         <div>
@@ -15,8 +15,8 @@ export default function List (
                     (a : Item, b : Item) => a.name?.localeCompare(b.name)
                 )
                 .map(
-                    (item : Item) => (
-                        <ListItem key={item.id} item={item} count={1}/>
+                    (item : Item, index: number) => (
+                        <ListItem key={item.id} item={item} count={counts[index]}/>
                     )
                 )
             }
